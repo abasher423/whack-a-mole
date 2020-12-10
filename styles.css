@@ -40,7 +40,6 @@ image {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   justify-content: center;
-  /* background-image: url(images/dirt.svg); */
 }
 
 .mole {
