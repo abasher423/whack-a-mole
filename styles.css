@@ -3,8 +3,6 @@ body {
   padding: 0;
   font-family: "Times New Roman", Times, serif;
   box-sizing: border-box;
-  border: 1px solid black;
-  outline: 1px black solid;
   display: grid;
   background-color: lightblue;
 }
@@ -29,21 +27,45 @@ image {
 
 .dirt {
   max-height: 100%;
+  z-index: -1;
 }
 
 .mole {
-  width: 251px;
+  width: 145px;
   height: 110px;
-  padding-left: 70px;
+  margin-left: 110px;
 }
 
 .area {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   justify-content: center;
+  /* background-image: url(images/dirt.svg); */
 }
 
 .mole {
   transform: translateY(150px);
-  z-index: -1;
+}
+
+.moleanimation {
+  animation-name: popout;
+  animation-duration: 5s;
+}
+
+@keyframes popout {
+  0% {
+    transform: translateY(120px);
+  }
+  25% {
+    transform: translateY(60px);
+  }
+  50% {
+    transform: translateY(-70px);
+  }
+  75% {
+    transform: translateY(60px);
+  }
+  100% {
+    transform: translateY(120px);
+  }
 }
