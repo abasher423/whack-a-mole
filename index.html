@@ -1,41 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>whack a mole</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <title>Whack A Mole!</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-    <header>
-        <h1 class="content-title">Whack a mole</h1>
-        <h1 class="score">0</h1>
-    </header>
-
-    <section id="headings">
-        <div class="main-content">
-            <button class="btn">Start</button>
-            <p>Good luck!</p>
+    <body>
+        <div class="content">
+            <h1>Whack-a-mole! <span class="score">0</span></h1> 
+            <select name="difficulty" id="mode">
+                <option value="none">-- Select Difficulty --</option>
+                <option value="easy" id="easy">Easy</option>
+                <option value="medium" id="medium">Medium</option>
+                <option value="hard" id="hard">Hard</option>
+            </select>
+            <button class="start">Start</button> 
+            <button class="reset">Reset</button> 
+            <p class="status"></p>
+            <p class="round">Round</p>
         </div>
-    </section>
-
-    <section id="game">
-        <div class="area">
-            <img src="images/mole.svg" alt="" class="mole">
-            <img src="images/mole.svg" alt="" class="mole">
-            <img src="images/mole.svg" alt="" class="mole">
-            <img src="images/dirt.svg" alt="" class="dirt">
-            <img src="images/dirt.svg" alt="" class="dirt">
-            <img src="images/dirt.svg" alt="" class="dirt">
-            <img src="images/mole.svg" alt="" class="mole">
-            <img src="images/mole.svg" alt="" class="mole">
-            <img src="images/mole.svg" alt="" class="mole">
-            <img src="images/dirt.svg" alt="" class="dirt">
-            <img src="images/dirt.svg" alt="" class="dirt">
-            <img src="images/dirt.svg" alt="" class="dirt">
+        
+        <div class="game">
+            <div class="hole hole1">
+            <div class="mole mole1"></div>
+            </div>
+            <div class="hole hole2">
+            <div class="mole mole2"></div>
+            </div>
+            <div class="hole hole3">
+            <div class="mole mole3"></div>
+            </div>
+            <div class="hole hole4">
+            <div class="mole mole4"></div>
+            </div>
+            <div class="hole hole5">
+            <div class="mole mole5"></div>
+            </div>
+            <div class="hole hole6">
+            <div class="mole mole6"></div>
+            </div>
         </div>
-    </section>
 
-    <script src="app.js"></script>
-</body>
+        <script src="app.js"></script>
+    </body>
 </html>
