@@ -38,3 +38,23 @@ function randomHole(holes){
     lastHole = hole
     return hole
 }
+
+function selectDifficulty(){
+    if (dropdown.value === 'easy') {
+        difficulty = 'easy'
+        status.innerText = "Don't Hurt Yourself"
+    }
+    else if (dropdown.value === 'medium') {
+        difficulty = 'medium'
+        status.innerText = 'A Worthy Opponent'
+    }
+    else if (dropdown.value === 'hard') {
+        difficulty = 'hard'
+        status.innerText = 'You Will Not Survive'
+    }
+    else if (dropdown.value === 'none') {
+        difficulty = ''
+        status.innerText = 'SELECT A DIFFICULTY'
+    } 
+}
+
