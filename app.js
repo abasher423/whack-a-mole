@@ -58,3 +58,18 @@ function selectDifficulty(){
     } 
 }
 
+function peep(){
+    if (difficulty === 'easy') time = randomTime(500, 1000)
+    if (difficulty === 'medium') time = randomTime(200, 500)
+    if (difficulty === 'hard') time = randomTime(0, 150)
+    const hole = randomHole(holes)
+    hole.classList.add('up')
+    setTimeout(()=>{
+       hole.classList.remove('up')
+       if (!timeUp){
+           peep()
+       } 
+    }, time)
+}
+
+
